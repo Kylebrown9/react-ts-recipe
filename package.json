@@ -2,5 +2,8 @@
   "name": "react-ts-recipe",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Kyle Brown <kylebrw@gmail.com>"
+  "author": "Kyle Brown <kylebrw@gmail.com>",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
 }

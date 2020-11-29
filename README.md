@@ -27,4 +27,52 @@ Tools
 2. Execute `yarn init -y`
 3. Modify any metadata in "package.json" if desired
 
+## TypeScript Setup
+
+1. Create the following files and their parent directories as needed
+
+**src/index.ts**
+```tsx
+const message: string = "Our TypeScript file is running as JavaScript";
+console.log(message);
+```
+
+**static/index.html**
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Temporary Title</title>
+  </head>
+  <body>
+      <script src="index.js"></script>
+  </body>
+</html>
+```
+
+**tsconfig.json**
+```json
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "es6",
+    "target": "es5",
+    "removeComments": true,
+    "jsx": "react",
+    "allowJs": true,
+  },
+  "include": ["./src"]
+}
+```
+
+2. Execute `yarn add -D typescript`
+3. Execute `yarn run tsc`
+4. Copy the "index.html" file into the "dist" folder
+5. Open the "dist/index.html" file in your browser and check the console output
+
 ## 
