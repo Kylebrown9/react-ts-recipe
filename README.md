@@ -2,12 +2,12 @@
 
 This is the simplest possible setup for my preferred React + TypeScript toolchain.
 
-Tools
- * git
- * yarn
- * webpack
- * TypeScript
- * React
+The setup can be thought of as layering the following tools / frameworks on top of each other
+ 1. git
+ 2. yarn
+ 3. TypeScript
+ 4. webpack
+ 5. React
 
 # Instructions
 
@@ -74,5 +74,40 @@ console.log(message);
 3. Execute `yarn run tsc`
 4. Copy the "index.html" file into the "dist" folder
 5. Open the "dist/index.html" file in your browser and check the console output
+
+## Webpack Setup
+1. Create a file "webpack.config.js" with the following contents
+```js
+const path = require('path');
+
+module.exports = {
+   entry: ['./src/index.ts', './static/index.html'],
+   module: {
+      rules: [
+         {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+         },
+         {
+            test: /\.html$/,
+            loader: "file-loader"
+         }
+      ],
+   },
+   resolve: {
+      extensions: [ '.tsx', '.ts', '.js' ],
+   },
+   output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+   },
+};
+```
+2. Change the script tag in "index.html" to point to "bundle.js" instead of "index.js"
+3. Execute `yarn add -D webpack webpack-cli ts-loader`
+4. Delete the contents of the "dist" directory
+5. Execute `yarn run webpack`
+6. Open the "dist/index.html" file in your browser and check the console output
 
 ## 
