@@ -107,7 +107,22 @@ module.exports = {
 2. Change the script tag in "index.html" to point to "bundle.js" instead of "index.js"
 3. Execute `yarn add -D webpack webpack-cli ts-loader`
 4. Delete the contents of the "dist" directory
-5. Execute `yarn run webpack`
+5. Execute `yarn run webpack --mode development`
 6. Open the "dist/index.html" file in your browser and check the console output
 
-## 
+## React Setup
+
+1. Delete "src/index.ts"
+2. Create a file "src/index.tsx" with the following contents
+```tsx
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
+ReactDOM.render(<p>Some basic text</p>, document.getElementById("root"));
+```
+3. In "webpack.config.js" change "index.ts" to "index.tsx"
+4. Add `<div id="root"></div>` to the body of "static/index.html" **before** the script tag
+5. Execute `yarn add react react-dom @types/react @types/react-dom"
+6. Delete the contents of the "dist" directory
+7. Execute `yarn run webpack --mode development`
+8. Open the "dist/index.html" file in your browser and check the console output
