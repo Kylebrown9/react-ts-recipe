@@ -21,4 +21,10 @@ Tools
 4. Execute `git add .`
 5. Execute `git commit -m "Initial Commit"`
 
+## Yarn Setup
+
+1. Install yarn if not already installed
+2. Execute `yarn init -y`
+3. Modify any metadata in "package.json" if desired
+
 ## 
