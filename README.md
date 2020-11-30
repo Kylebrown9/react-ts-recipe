@@ -9,7 +9,9 @@ The setup can be thought of as layering the following tools / frameworks on top 
  4. webpack
  5. React
 
-# Instructions
+# How this was made
+
+Here are the instructions that were used to make this template
 
 ## Git Setup
 
