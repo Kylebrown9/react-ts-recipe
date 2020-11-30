@@ -131,5 +131,5 @@ ReactDOM.render(<p>Some basic text</p>, document.getElementById("root"));
 
 # References
 
-https://webpack.js.org/guides/getting-started
-https://medium.com/@adriancelczynski/react-with-typescript-starter-kit-without-create-react-app-including-webpack-eslint-bef225c35ffa
+* https://webpack.js.org/guides/getting-started
+* https://medium.com/@adriancelczynski/react-with-typescript-starter-kit-without-create-react-app-including-webpack-eslint-bef225c35ffa
