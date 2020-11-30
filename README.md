@@ -126,3 +126,8 @@ ReactDOM.render(<p>Some basic text</p>, document.getElementById("root"));
 6. Delete the contents of the "dist" directory
 7. Execute `yarn run webpack --mode development`
 8. Open the "dist/index.html" file in your browser and check the console output
+
+# References
+
+https://webpack.js.org/guides/getting-started
+https://medium.com/@adriancelczynski/react-with-typescript-starter-kit-without-create-react-app-including-webpack-eslint-bef225c35ffa
