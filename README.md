@@ -107,7 +107,7 @@ module.exports = {
 };
 ```
 2. Change the script tag in "index.html" to point to "bundle.js" instead of "index.js"
-3. Execute `yarn add -D webpack webpack-cli ts-loader`
+3. Execute `yarn add -D webpack webpack-cli ts-loader file-loader`
 4. Delete the contents of the "dist" directory
 5. Execute `yarn run webpack --mode development`
 6. Open the "dist/index.html" file in your browser and check the console output
